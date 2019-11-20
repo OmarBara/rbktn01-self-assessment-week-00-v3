@@ -4,41 +4,41 @@
 //
 // A family member looks like this:
 //
-// {
-//   firstName: 'Fred'
-//   lastName: 'Zirdung'
-//   location: 'San Francsico'
-//   children: [/* ... */]
-// }
-//
-// EXAMPLE:
-//
-// var familyTree = {
-//   'firstName': 'Beth',
-//   'lastName': 'Johnson',
-//   'location': 'San Francisco',
-//   'children': [
-//     {
-//       'firstName': 'Beth Jr.',
-//       'lastName': 'Johnson',
-//       'location': 'Berkeley',
-//       'children': [
-//         {
-//           'firstName': 'Smitty',
-//           'lastName': 'Won',
-//           'location': 'Beijing',
-//           'children': []
-//         }
-//       ]
-//     },
-//     {
-//       'firstName': 'Joshie',
-//       'lastName': 'Wyattson',
-//       'location': 'Berkeley',
-//       'children': []
-//     }
-//   ]
-// };
+{
+  firstName: 'Fred'
+  lastName: 'Zirdung'
+  location: 'San Francsico'
+  children: [/* ... */]
+}
+
+EXAMPLE:
+
+var familyTree = {
+  'firstName': 'Beth',
+  'lastName': 'Johnson',
+  'location': 'San Francisco',
+  'children': [
+    {
+      'firstName': 'Beth Jr.',
+      'lastName': 'Johnson',
+      'location': 'Berkeley',
+      'children': [
+        {
+          'firstName': 'Smitty',
+          'lastName': 'Won',
+          'location': 'Beijing',
+          'children': []
+        }
+      ]
+    },
+    {
+      'firstName': 'Joshie',
+      'lastName': 'Wyattson',
+      'location': 'Berkeley',
+      'children': []
+    }
+  ]
+};
 //
 // var livesInBerkeley = function (familyMember) {
 //   return familyMember.location === 'Berkeley';
@@ -52,5 +52,19 @@
 
 var filterFamilyMembers = function (familyTree, truthTest) {
   // All your code in this function body
+  
+  //if(truthTest)
+  
+console.log(familyTree.firstName)
+  if(familyTree.children.length > 0 ){
+  	// recursion return the childeren
+  	//for (var i = 0; i < familyTree.children.length; i++) {
+
+  		filterFamilyMembers(familyTree.children[i])
+  		//console.log(familyTree.children[i],i)
+  		
+  	
+  	console.log(familyTree.firstName)
+  }
 };
 
